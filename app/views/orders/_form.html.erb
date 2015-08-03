@@ -1,0 +1,46 @@
+<%= form_for @order do |f| %>
+
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@order.errors.count, "error") %> prevented you from placing your order:
+      </h2>
+      <ul>
+        <% @order.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :item %><br>
+    <%= f.text_area :item %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p> -->
+
+  <div class="field form-group">
+      <%= f.label :name, class: 'col col-lg-2 control-label' %><br />
+      <%= f.text_field :name, class: 'form-control', autofocus: true %>
+  </div>
+
+  <div class="field form-group">
+      <%= f.label :item, class: 'col col-lg-2 control-label' %><br />
+      <%= f.text_area :item, class: 'form-control', autofocus: true %>
+  </div>
+
+  <div class="actions form-group">
+      <div class="col-lg-offset-0 col-offset-2">
+        <%= f.submit class: "btn btn-default"%>
+      </div>
+  </div>
+
+<% end %>

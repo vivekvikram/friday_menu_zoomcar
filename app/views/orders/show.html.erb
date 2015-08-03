@@ -1,0 +1,13 @@
+<p>
+  <strong>Name:</strong>
+  <%= @order.name %>
+</p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @order.item %>
+</p>
+
+<%= link_to 'Back', orders_path, class: 'btn btn-primary btn-xs' %> |
+<%= link_to 'Edit', edit_order_path, class: 'btn btn-info btn-xs'%>  |
+<%= link_to "Sign Out", destroy_member_session_path, :method => :delete, class: 'btn btn-danger btn-xs' %>

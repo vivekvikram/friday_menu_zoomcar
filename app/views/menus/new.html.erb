@@ -1,0 +1,17 @@
+<link href='http://fonts.googleapis.com/css?family=Petit+Formal+Script' rel='stylesheet' type='text/css'>
+
+<h1 id="menu"> Menu for You </h1>
+<%= form_for :menu, url: menus_path do |f| %>  <p>
+    <%= f.label :dish %><br>
+    <%= f.text_field :dish %>
+  </p>
+ 
+  <p>
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

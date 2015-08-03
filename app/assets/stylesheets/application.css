@@ -1,0 +1,129 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree .
+*/
+/* CSS Document */
+
+/*.offscreen {
+  position: absolute;
+  top: -30em;
+  left: -300em;
+}
+
+div#hmenu {
+   margin: 0;
+   padding: .3em 0 .3em 0;
+   background: #ddeebb;
+   width: 100%;
+   text-align: center;
+}
+
+div#hmenu ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+div#hmenu ul li {
+   margin: 0;
+   padding: 0;
+   display: inline;
+}
+
+div#hmenu ul a:link{
+   margin: 0;
+   padding: .3em .4em .3em .4em;
+   text-decoration: none;
+   font-weight: bold;
+   font-size: medium;
+   color: #004415;
+}
+
+div#hmenu ul a:visited{
+   margin: 0;
+   padding: .3em .4em .3em .4em;
+   text-decoration: none;
+   font-weight: bold;
+   font-size: medium;
+   color: #227755;
+}
+
+div#hmenu ul a:active{
+   margin: 0;
+   padding: .3em .4em .3em .4em;
+   text-decoration: none;
+   font-weight: bold;
+   font-size: medium;
+   color: #227755;
+}
+
+div#hmenu ul a:hover{
+   margin: 0;
+   padding: .3em .4em .3em .4em;
+   text-decoration: none;
+   font-weight: bold;
+   font-size: medium;
+   color: #f6f0cc;
+   background-color: #227755;
+}*/
+
+body {
+    padding-top: 60px;
+    font-family: Arvo;
+    background-image: url(/assets/zoomcar.jpg);
+}
+
+#new{
+  color: black;
+  font-family:'Petit formal Script',sans-serif;
+}
+
+#ord{
+  color: black;
+  font-family: 'Petit formal Script'
+}
+
+#lis{
+  color: black;
+  font-family: monospace;
+}
+#wel{
+  color: black;
+  font-family: 'Petit formal Script'
+}
+
+#sig{
+  color: black;
+  font-family: 'Special Elite'
+}
+#search{
+  color: black;
+  font-family: 'Dancing Script'
+}
+#menu{
+  color: black;
+  font-family: 'Petit formal Script'
+}
+#nav{
+  color: #64FE2E;
+  font-family: 'Poiret One'
+}
+#log{
+  color: black;
+  font-family: 'Nunito'
+}
+#self{
+  color: white;
+  font-family: 'Poiret One'
+}
+#goto{
+  color: black;
+  font-family: 'Special Elite'
+}
+#sort{
+  color: black;
+  font-family: 'Dancing Script'
+}

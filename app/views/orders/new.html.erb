@@ -1,0 +1,24 @@
+<link href='http://fonts.googleapis.com/css?family=Petit+Formal+Script' rel='stylesheet' type='text/css'>
+
+<% if member_signed_in? %>
+<h2 id="new">New Order</h2>
+<%= render 'form' %>
+<h4 id="search"> Please narrow down your dish from below or visit the Menu section </h4>
+<%= form_tag menus_path, :method => 'get', :id => "dishe_search" do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
+<%= link_to 'Menu', menus_path, class: 'btn btn-success btn-xs' %>  |
+<%= link_to 'All orders', orders_path, class: 'btn btn-info btn-xs' %>      |
+<%= link_to "Sign Out", destroy_member_session_path, :method => :delete, class: 'btn btn-danger btn-xs' %>
+
+<% else %>
+<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+<h3 id="ord">You are not logged in!! :(</h3>
+<p></br></br>
+<h4 id="goto" >Please goto <a href="http://localhost:3000/members/sign_in"</a>sign in</h4>
+</p>
+<% end %>

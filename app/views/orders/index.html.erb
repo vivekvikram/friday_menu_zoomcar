@@ -1,0 +1,57 @@
+<link href='http://fonts.googleapis.com/css?family=Petit+Formal+Script' rel='stylesheet' type='text/css'>
+<% if member_signed_in? %>
+<h3 id="ord">Listing All Orders</h3>
+
+
+<!-- <td><%= link_to "Sign Out", destroy_member_session_path, :method => :delete %></td> -->
+<div class="container">
+  <table class="tabel table-hover table-bordered table-condensed", cellspacing="10">  
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Item</th>
+        <th colspan="2"></th>
+      </tr>
+    </thead>
+</div>  
+<% @orders.each do |order| %>
+    <tr>
+      <td><%= order.name %></td>
+      <td><%= order.item %></td>
+      <!-- <td><%= link_to 'Edit', edit_order_path(order) %></td> -->
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'New Order', new_order_path, class: 'btn btn-primary btn-xs' %> |
+
+<td><%= link_to "Sign Out", destroy_member_session_path, :method => :delete, class: 'btn btn-danger btn-xs' %></td> |
+<%= link_to 'Print', 'Index', :onclick => 'window.print();return false;', class: 'btn btn-primary btn-xs'%>
+
+<% else %>
+<h3 id="ord">Listing All Orders</h3>
+
+
+<!-- <td><%= link_to "Sign Out", destroy_member_session_path, :method => :delete %></td> -->
+<div class="container">
+  <table class="tabel table-hover table-bordered table-condensed", cellspacing="10">  
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Item</th>
+        <th colspan="2"></th>
+      </tr>
+    </thead>
+</div>  
+<% @orders.each do |order| %>
+    <tr>
+      <td><%= order.name %></td>
+      <td><%= order.item %></td>
+      <!-- <td><%= link_to 'Edit', edit_order_path(order) %></td> -->
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'New Order', new_order_path, class: 'btn btn-primary btn-xs' %> |
+
+<%= link_to "Sign In", new_member_session_path, :method => :get, class: 'btn btn-info btn-xs' %>|
+<%= link_to 'Print', 'Index', :onclick => 'window.print();return false;', class: 'btn btn-primary btn-xs'%>
+<% end %>

@@ -1,0 +1,26 @@
+<link href='http://fonts.googleapis.com/css?family=Petit+Formal+Script' rel='stylesheet' type='text/css'>
+
+<% if member_signed_in? %>
+<!-- <link href='http://fonts.googleapis.com/css?family=Petit+Formal+Script' rel='stylesheet' type='text/css'> -->
+
+</br>
+<h3 id="ord">You have succesfully signed in!! :)</h3>
+<!-- <h3>Proceed with your order from below</h3> -->
+</br></br></br>
+<%= link_to 'New Order', new_order_path, class: 'btn btn-primary btn-xs' %> |
+<%= link_to 'Menu', menus_path, class: 'btn btn-success btn-xs' %>  |
+<%= link_to "Sign Out", destroy_member_session_path, :method => :delete, class: 'btn btn-danger btn-xs' %>
+
+
+<% else %>
+<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+</br>
+<h1 id="wel"> Welcome to ZoomCar Special Friday</h1></br></br></br></br>
+<h5 id="sig"> Already have an account?
+  <%= link_to "Sign In", new_member_session_path, :method => :get, class: 'btn btn-primary btn-xs' %>
+</h5>
+
+<h5 id="sig"> Don't have an account?
+  <%= link_to "Sign up", new_member_registration_path, :method => :get, class: 'btn btn-success btn-xs' %>
+</h5>
+<% end %>

@@ -1,0 +1,40 @@
+<!-- <link href='http://fonts.googleapis.com/css?family=Petit+Formal+Script' rel='stylesheet' type='text/css'> -->
+
+<h3>            </h3>
+<h3>            </h3>
+<h3 id="lis">Listing Menu</h3>
+
+ 
+<%= form_tag menus_path, :method => 'get', :id => "dish_search" do %>
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+<!-- <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+</br>
+<h4 id="sort"> P.S. : you can sort the menu in alphabetical order or by price </h4>
+
+<table class="tabel table-hover table-bordered table-condensed", cellspacing="20">
+    <tr>
+
+      <th><%= sortable "dish" %></th>
+      <th><%= sortable "price" %></th> -->
+      <!-- <th><%= link_to "Dish", :sort => "dish" %></th>
+      <th><%= link_to "Price", :sort => "price" %></th> -->
+      <!-- <th>Dish</th>
+      <th>Price</th> -->
+    <!-- <th colspan="2"></th>
+    </tr>
+ 
+   <% @menus.each do |menu| %>
+      <tr>
+        <td><%= menu.dish %></td>
+        <td><%= menu.price %></td>
+      </tr>
+    <% end %>
+</table> -->
+<div id="menu"><%= render 'menu' %></div>
+<%= link_to 'Back', new_order_path, class: 'btn btn-primary btn-xs' %>
